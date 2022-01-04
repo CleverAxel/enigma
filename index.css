@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+:root{
+    --beige : #CAD2C5;
+    --bush : #84A98C;
+    --bronze: #52796F;
+    --coolGray : #354F52;
+    --cyan : #2F3E46;
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--beige);
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  a:active {
+    color: black;
+  }
+
+/***********************************************************/
+
+header{
+    min-height: 20vh;
+    background-color: var(--cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 8rem;
+    background-color: var(--bush);
+    padding: 0.1em 0.4em;
+    border-radius: 4em;
+}
+
+header > h1 > span{
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+/**************************************************************/
+.possibilities{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.possibilities > h2{
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+}
+
+.possibilities > h2 > .bold{
+    font-weight: bold;
+    font-size: 5rem;
+    text-decoration: underline;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
+}
+/****************************************************/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    max-width: 100rem;
+    min-height: 100px;
+    border-left: 1px solid var(--bronze);
+    border-right: 1px solid var(--bronze);
+}
+
+main > .description{
+    width: 100%;
+    align-self: center;
+    font-size: 2.1rem;
+}
+
+main > .description > p{
+    margin: 0 1rem 0 1rem;
+    padding: 0.4em 0;
+    
+}
+
+button{
+    display: block;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 8px var(--coolGray);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 5rem;
+    background-color: var(--bronze);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all .2s ease;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-style: none;
+    outline: none;
+}
+
+button:active{
+    box-shadow: 0 1px var(--coolGray);
+    transform: translateY(7px);
+}
+
+
+@media only screen and (min-width: 1000px){
+    main{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

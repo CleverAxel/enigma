@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="appEnigma.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <title>ENIGMA</title>
+</head>
+<body>
+
+    <div class="menuConfig hideElement">
+        <div class="configurationEnigma">
+            <h2>Choix des rotors</h2>
+            <button class="choixRotor">I</button>
+            <button class="choixRotor">II</button>
+            <button class="choixRotor">III</button>
+            <button class="choixRotor">IV</button>
+            <button class="choixRotor">V</button>
+
+            <div class="numeroRotorChoisi">
+                <div class="numeroRotorChoisiActive">I</div>
+                <div>II</div>
+                <div>III</div>
+            </div>
+
+            <h2>Position des rotors 0-25</h2>
+            <div class="positionRotorChoisi">
+                <input type="text" maxlength="2">
+                <input type="text" maxlength="2">
+                <input type="text" maxlength="2">
+            </div>
+
+            <h2>Inversement de deux lettres</h2>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <div class="inversementLettre">
+                <input type="text" maxlength="1" class="inputLettre">
+                <span class="material-icons">loop</span>
+                <input type="text" maxlength="1" class="inputLettre">
+            </div>
+            <button id="randomLetter">Inverser lettres aléatoirement<span class="material-icons">shuffle</span></button>
+
+            <div class="saveCancel">
+                <button id="save"><span class="material-icons">save</span></button>
+                <button id="cancel"><span class="material-icons">close</span></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!----------------------------------------------->
+    <header>
+        <a href="index.html">
+            <h1><span class="material-icons">key</span>ENIGMA <span class="material-icons">lock_open</span></h1>
+        </a>
+    </header>
+
+    <main>
+        <section class="alphabet">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>J</div>
+            <div>K</div>
+            <div>L</div>
+            <div>M</div>
+            <div>N</div>
+            <div>O</div>
+            <div>P</div>
+            <div>Q</div>
+            <div>R</div>
+            <div>S</div>
+            <div>T</div>
+            <div>U</div>
+            <div>V</div>
+            <div>W</div>
+            <div>X</div>
+            <div>Y</div>
+            <div>Z</div>
+        </section>
+    </main>
+
+    <div class="settingContainer">
+        <button id="settings"><span class="material-icons">settings</span></button>
+    </div>
+
+    <div class="inputContainer">
+        <textarea name="inputText" placeholder="Entrez texte ici...Ne prends pas en compte les accents." cols="0"></textarea>
+        <button id="submit">(DÉ)CRYPTER LE MESSAGE</button>
+    </div>
+
+    <div class="timerContainer">
+        <span>
+            Vitesse de conversion (MIN 0 - MAX 10). Zéro étant une converssion "instantanée"
+        </span>
+        <input type="number" min="0" max="10" value="3">
+    </div>
+
+    <div class="outputContainer">
+        <h2>MESSAGE CONVERTI</h2>
+        <div class="output"></div>
+    </div>
+
+    <script src="script/appEnigma/main.js" type="module"></script>
+</body>
+</html>

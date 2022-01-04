@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <title>ENIGMA</title>
+</head>
+<body>
+    <header>
+        <h1><span class="material-icons">key</span>ENIGMA <span class="material-icons">lock_open</span></h1>
+    </header>
+
+    <section class="possibilities">
+        <h2>
+            <span number="158"></span>,
+            <span number="962"></span>,
+            <span number="555"></span>,
+            <span number="217"></span>,
+            <span number="826"></span>,
+            <span number="360"></span>,
+            <span number="000"></span>
+            <span class="bold">possibilities</span>
+        </h2>
+    </section>
+    <section class="title">
+        <h2>For one possibility.</h2>
+    </section>
+
+    <main>
+        <section class="description">
+            <p>Le fonctionnement d'Enigma est on ne peut plus simple.</p>
+            <p>Au départ, il nous faut choisir 3 rotors parmi 5 à mettre dans l'ordre que l'on souhaite. Ce qui nous donne
+                60 combinaisons possibles.
+            </p>
+            <p>
+                Ensuite il faut règler les crans de ces 3 rotors dans le bon ordre. A savoir que si on a choisi les 3 bons
+                rotors et qu'ils sont dans le bon ordre il nous reste 26x26x26 possibilités, soit 17 576 possibilités.
+            </p>
+            <p>
+                Il y a ensuite la tableau de connexion (ou plugboard). Grâce à 1 câble, on peut permuter 2 lettres. Sachant
+                qu'il y a 10 câbles cela donne au maximum une permutation de 20 lettres.
+            </p>
+            <p>
+                Mettez cela bout à bout et cela donne 158 962 555 217 826 360 000 différentes manières de règler ENIGMA qui
+                nous permet de crypter des messages de manière presque inviolable...
+            </p>
+            <p>
+                Le seul défaut de cette machine est qu'elle ne renverra jamais la lettre que l'on vient d'envoyer. Et c'est
+                à partir de ce défaut qu'Alan Turing réussit à casser ENIGMA.
+            </p>
+        </section>
+    </main>
+
+    <a href="appEnigma.html">
+        <button>TESTER ENIGMA</button>
+    </a>
+    <script src="script/index/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+:root{
+    --beige : #CAD2C5;
+    --bush : #84A98C;
+    --bronze: #52796F;
+    --coolGray : #354F52;
+    --cyan : #2F3E46;
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--beige);
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  a:active {
+    color: black;
+  }
+
+/***********************************************************/
+
+header{
+    min-height: 20vh;
+    background-color: var(--cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > a > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 8rem;
+    background-color: var(--bush);
+    padding: 0.1em 0.4em;
+    border-radius: 4em;
+}
+
+header a > h1 > span{
+    font-size: 10rem;
+    font-weight: bold;
+}
+/*******************************************/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    max-width: 100rem;
+    min-height: 100px;
+    border-left: 1px solid var(--bronze);
+    border-right: 1px solid var(--bronze);
+}
+
+main > .alphabet{
+    max-width: 60rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+main > .alphabet > div{
+    background-color: rgb(153, 153, 153);
+    font-size: 2.1rem;
+    width: 5rem;
+    height: 5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0.5rem;
+    box-shadow: inset 0px 0px 15px 1px #000000;
+}
+
+.settingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.settingContainer > button{
+    display: block;
+    box-shadow: 0 8px rgb(145, 99, 0);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: rgb(204, 145, 18);;
+    border-radius: 5px;
+    transition: all .1s ease;
+    font-weight: 900;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    margin: 0 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.settingContainer > button:active{
+    box-shadow: 0 1px rgb(145, 99, 0);
+    transform: translateY(7px);
+}
+
+.settingContainer > #resetSettings{
+    max-width: 20rem;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+textarea[name="inputText"]{
+    max-width: 100%;
+    width: 70rem;
+    height: 10rem;
+    font-size: 2rem;
+    margin: 1rem 1rem 0 1rem;
+    font-family: 'Source Code Pro', monospace;
+    resize: none;
+    outline: 1px solid black;
+    border-style: none;
+}
+
+.inputContainer > button{
+    display: block;
+    max-width: 100%;
+    width: 70rem;
+    box-shadow: 0 8px var(--coolGray);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: var(--bronze);
+    border-radius: 5px;
+    transition: all .1s ease;
+    font-weight: 900;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    margin: 0 1rem 0 1rem;
+}
+
+.inputContainer > button:active{
+    box-shadow: 0 1px var(--coolGray);
+    transform: translateY(7px);
+}
+
+.outputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    /*margin-top: 4rem;*/
+    margin-bottom: 4rem;
+}
+
+.outputContainer > .output{
+    max-width: 100%;
+    width: 70rem;
+    height: 10rem;
+    font-size: 2rem;
+    margin: 0rem 1rem 0 1rem;
+    font-family: 'Source Code Pro', monospace;
+    resize: none;
+    outline: 1px solid black;
+    border-style: none;
+    background-color: white;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+
+.outputContainer > h2{
+    margin: 0;
+    max-width: 100%;
+    width: 70rem;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: var(--bronze);
+    border-radius: 5px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.timerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.timerContainer > input{
+    font-size: 2rem;
+    width: 5rem;
+    outline: none;
+    border-style: none;
+}
+.timerContainer > span{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    max-width: 15rem;
+}
+/************************************************************/
+
+.menuConfig{
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.configurationEnigma{
+    max-width: 100%;
+    width: 40rem;
+    margin: 1rem;
+    height: 98vh;
+    overflow-y: scroll;
+    border-radius: 10px;
+    background-color: rgb(97, 97, 97);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.configurationEnigma > h2{
+    background-color: white;
+    border-radius: 4em;
+    font-family: 'Amatic SC', cursive;
+    font-size: 4rem;
+    padding: 0 0.5em;
+    margin: 1rem;
+    text-align: center;
+}
+
+.configurationEnigma > button{
+    display: block;
+    box-shadow: 0 8px rgb(145, 99, 0);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: rgb(204, 145, 18);;
+    border-radius: 5px;
+    transition: all .1s ease;
+    font-weight: 900;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 0.2em;
+}
+
+.configurationEnigma > button:active{
+    box-shadow: 0 1px rgb(145, 99, 0);
+    transform: translateY(7px);
+}
+
+.numeroRotorChoisi{
+    display: flex;
+    justify-content: center;
+}
+
+.numeroRotorChoisi > div{
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    margin: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.numeroRotorChoisiActive{
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 5px 0px #000000;
+}
+
+.positionRotorChoisi{
+    display: flex;
+    justify-content: center;
+}
+
+.positionRotorChoisi > input{
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    margin: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px black;
+    border-style: none;
+}
+
+.inversementLettre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inversementLettre > input{
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    margin: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px black;
+    border-style: none;
+}
+
+.saveCancel{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+#save{
+    display: block;
+    box-shadow: 0 8px rgb(0, 75, 0);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: rgb(0, 128, 0);
+    border-radius: 5px;
+    transition: all .1s ease;
+    font-weight: 900;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em 1em;
+}
+
+#save:active{
+    box-shadow: 0 1px rgb(0, 75, 0);
+    transform: translateY(7px);
+}
+
+#cancel{
+    display: block;
+    box-shadow: 0 8px rgb(75, 0, 0);
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    background-color: rgb(128, 0, 0);
+    border-radius: 5px;
+    transition: all .1s ease;
+    font-weight: 900;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em 1em;
+}
+
+#cancel:active{
+    box-shadow: 0 1px rgb(75, 0, 0);
+    transform: translateY(7px);
+}
+
+.hideElement{
+    display: none;
+}
+
+.alphabet > .highlightKey{
+    background-color: rgb(255, 255, 166);
+    box-shadow: 0 0 15px 1px yellow;
+}
+
+@media only screen and (min-width: 1000px){
+    main{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
